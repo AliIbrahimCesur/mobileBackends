@@ -41,7 +41,7 @@ class BookViewSet(viewsets.ModelViewSet):
         queryset = self.filter_queryset(self.get_queryset())
         title_query = request.query_params.get('title', None)
         author_query = request.query_params.get('author', None)
-        print("queryset:",queryset)
+        #print("queryset:",queryset)
 
         if title_query:
             queryset = queryset.filter(title__icontains=title_query)
